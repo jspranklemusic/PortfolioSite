@@ -189,7 +189,7 @@ const Contact = ()=>{
             <input name="form-name" value="Netlify Rocks" type="hidden" />
                     <h1>Let's get in touch.</h1>
                     <div className="links">
-                        <a href="#">Github</a> <a href="#">LinkedIn</a> <a href="mailto:jspranklemusic@gmail.com">Email</a>
+                        <a href="https://github.com/jspranklemusic">Github</a> <a href="https://www.linkedin.com/in/josiah-sprankle-8862a1103/">LinkedIn</a> <a href="mailto:jspranklemusic@gmail.com">Email</a>
                     </div>
                     <div className="form-control">
                         <label htmlFor="name">Name<span style={{color:"red"}}>*</span></label>

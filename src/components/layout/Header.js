@@ -19,6 +19,7 @@ const HeaderContainer = styled.header`
         transition:0.2s;
         font-weight:bold;
         margin:0 1rem;
+        flex:0;
 
         &:hover{
             color:var(--mediumblue) !important;
