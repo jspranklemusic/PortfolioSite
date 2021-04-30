@@ -13,6 +13,20 @@ const H1 = styled.h1`
     animation:slide-right 0.6s backwards;
 `
 
+const Spinner = styled.div`
+    margin:1.5rem auto;
+
+    .icon{
+        animation:rotate 1s infinite linear;
+        font-size:1rem;
+    }
+
+    .text{
+        font-size:1rem;
+        animation:fade-repeat 1s infinite linear;
+    }
+`
+
 const Form = styled.form`
     animation:slide-left 0.6s backwards;
     display:flex;
@@ -89,6 +103,9 @@ const Form = styled.form`
 
 const Contact = ()=>{
 
+    const [submitting, setSubmitting] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
+
     const [form, setForm] = useState({
         name:"",
         email:"",
@@ -124,16 +141,21 @@ const Contact = ()=>{
     }
 
     async function submitForm(e){
+        setSubmitting(true);
+
         e.preventDefault();
+
         const response = await fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact", ...form })
           }).catch(error => console.log(error));
           if(response.ok){
-            alert("all good.")
+            console.log("all good.")
+            setSubmitting(false);
+            setSubmitted(true);
           }else{
-              console.log(response)
+              console.log(response);
           }
     
           
@@ -143,8 +165,12 @@ const Contact = ()=>{
     return(
         <Div>
            
-
-            <H1>Let's get in touch.</H1>
+            
+            {!submitted && <H1>Let's get in touch.</H1>}
+            {submitted && <div>
+                <h1>Thank you for your submission!</h1>
+                <p>I will be in touch with you shortly.</p>
+                </div>}
             <Form onSubmit={submitForm}>
                     
                     <div className="form-control">
@@ -153,18 +179,25 @@ const Contact = ()=>{
                     </div>
                     <div className="form-control">
                         <label htmlFor="email">Email<span style={{color:"red"}}>*</span></label>
-                        <input is_error="false" onBlur={validate} required name="email" id="email" type="email"/>
+                        <input is_error="false" onBlur={validate} required onInput={submitHandler} name="email" id="email" type="email"/>
                     </div>
                     <div className="form-control">
                         <label htmlFor="subject">Subject<span style={{color:"red"}}>*</span></label>
-                        <input  is_error="false" onBlur={validate} required name="subject" id="subject" type="text"/>
+                        <input  is_error="false" onBlur={validate} required onInput={submitHandler} name="subject" id="subject" type="text"/>
                     </div>
 
               
 
                     <label htmlFor="message">Message</label>
-                    <textarea name="message" type="text"/>
-                    <Button style={{margin:"auto", marginTop:"1rem"}} type="submit">Submit</Button>
+                    <textarea onInput={submitHandler} name="message" id="message" type="text"/>
+                    {!submitting && <Button style={{margin:"auto", marginTop:"1rem"}}  type="submit">Submit</Button>}
+                    {submitting && <Spinner>
+                        <span><i class="fas fa-circle-notch icon"></i></span>
+                        &nbsp;
+                        <span className="text"> Processing...</span>
+                       
+                        </Spinner>}
+                    
 
             </Form>
         </Div>

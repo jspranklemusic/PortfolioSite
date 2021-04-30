@@ -24,11 +24,10 @@ html,body{
   height: 100vh; /* Fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 100);
   overflow:hidden;
-  
   color:var(--black);
   background:rgb(220, 220, 220);
   
-}mobile-only
+}
 
 .track-vertical{
   color:green;
@@ -144,6 +143,27 @@ html,body{
   }
   100%{
     transform:translateX(0rem)
+  }
+}
+
+@keyframes rotate{
+  0%{
+    transform:rotateZ(0deg);
+  }
+  100%{
+    transform:rotateZ(359deg);
+  }
+}
+
+@keyframes fade-repeat{
+  0%{
+    opacity:0.4;
+  }
+  50%{
+    opacity:0.8;
+  }
+  100%{
+    opacity:0.4;
   }
 }
 
