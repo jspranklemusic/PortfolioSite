@@ -171,7 +171,8 @@ const Contact = ()=>{
                 <h1>Thank you for your submission!</h1>
                 <p>I will be in touch with you shortly.</p>
                 </div>}
-            <Form onSubmit={submitForm}>
+            <Form name="contact" data-netlify="true" onSubmit={submitForm}>
+            <input name="form-name" value="Netlify Rocks" type="hidden" />
                     
                     <div className="form-control">
                         <label htmlFor="name">Name<span style={{color:"red"}}>*</span></label>
