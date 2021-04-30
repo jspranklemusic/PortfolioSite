@@ -1,5 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+}
+
+:root{
+  --black:rgb(60, 60, 60);
+  --darkgrey:rgb(80,80,80);
+  --lightblue:rgb(185, 225, 240);
+  --mediumblue:rgb(169, 217, 236);
+  --darkskyblue:rgb(52, 150, 189);
+}
+
+html,body{
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:rgb(220, 220, 220);
+  color:var(--black);
+  
+}mobile-only
+
+.track-vertical{
+  color:green;
+  background:red;
+}
+
+.mobile-only-flex{
+  display:none !important;
+}
+
+#content{
+  overflow-y:scroll;
+  overflow-x:hidden;
+  height:100%;
+}
+
+
 .App {
   text-align: center;
+  height:100vh;
+  display:grid;
+  grid-template-rows: 3rem 1fr;
+
+}
+
+#content{
+  padding:2rem;
 }
 
 .App-logo {
@@ -34,5 +87,90 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-basic{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
+@keyframes fadeout-basic{
+  0%{
+    opacity:1;
+  }
+  100%{
+    opacity:0;
+  }
+}
+
+@keyframes fadein-portfolio-item{
+  0%{
+    transform:translateY(-3rem)
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-left{
+  0%{
+    transform:translateX(-4rem)
+  }
+  100%{
+    transform:translateX(0rem)
+  }
+}
+
+@keyframes slide-up{
+  0%{
+    transform:translateY(4rem)
+  }
+  100%{
+    transform:translateY(0rem)
+  }
+}
+
+@keyframes slide-right{
+   0%{
+    transform:translateX(4rem)
+  }
+  100%{
+    transform:translateX(0rem)
+  }
+}
+
+
+@media only screen and (max-width:900px){
+  html{
+    font-size:95%;
+  }
+}
+
+@media only screen and (max-width:700px){
+  html{
+    font-size:90%;
+  }
+}
+
+@media only screen and (max-width:600px){
+  .mobile-only-flex{
+    display:flex !important;
+  }
+}
+
+@media only screen and (max-width:550px){
+  html{
+    font-size:85%;
+  }
+}
+
+@media only screen and (max-width:400px){
+  html{
+    font-size:80%;
   }
 }

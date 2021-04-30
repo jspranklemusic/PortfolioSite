@@ -1,0 +1,18 @@
+[
+    {
+        "name":"James Sadler",
+        "project":"Pluto Records",
+        "story":"The website that Josiah built for my business exceeded all expectations! He is very professional and easy to work with.",
+        "image":"james-picture.jpg",
+        "project_image":"vinyl-records-store.png",
+        "link":"https://jamessadlertestserver.josiahsprankle.repl.co/"
+    },
+    {
+        "name":"Billy Wood",
+        "project":"Exalted Christian Band",
+        "story":"...I really appreciate it! The website works great and has a nice look and feel to it.",
+        "image":"billy-pic.jpg",
+        "project_image":"exalted-band.png",
+        "link":"https://exaltedband.netlify.app/"
+    }
+]
