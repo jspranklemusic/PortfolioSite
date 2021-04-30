@@ -32,11 +32,13 @@ const Form = styled.form`
     display:flex;
     flex-direction:column;
     width:100%;
+    
     max-width:600px;
     margin:1rem auto;
     background:white;
     box-shadow:3px 3px 5px rgba(0,0,0,.25);
     height:90%;
+    min-height:max-content;
     align-items:center;
     padding:1rem;
     border-radius:10px;
