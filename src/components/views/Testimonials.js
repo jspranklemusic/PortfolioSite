@@ -81,6 +81,11 @@ const Div = styled.div`
 const Testimonials = props=>{
 
 
+    const imageFade = ()=>{
+        document.querySelectorAll('image').forEach(image=>{
+            image.style.animation="fade-basic 1s backwards"
+        })
+    }
 
     return(
         <Div>
@@ -90,7 +95,7 @@ const Testimonials = props=>{
                     <StoryItem>
                         <h3>{story.name}</h3>
                         <h4>{story.project}</h4>
-                        <img src={"/assets/images/"+story.image} alt=""/>
+                        <img loading="lazy" onLoad={imageFade} src={"/assets/images/"+story.image} alt=""/>
                         <p>{story.story}</p>
                         <a target="_blank" href={story.link}>View Project</a>
                         
