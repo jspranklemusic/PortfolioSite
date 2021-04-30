@@ -63,9 +63,7 @@ const Div = styled.div`
         @media only screen and (max-width:600px){
             order:2;
         }
-       
-
-
+    
         img{
            width:100px;
            border-radius:50%;
@@ -78,10 +76,9 @@ const Div = styled.div`
 
 const Testimonials = props=>{
 
-
     const imageFade = ()=>{
         document.querySelectorAll('image').forEach(image=>{
-            image.style.animation="fade-basic 1s backwards"
+            image.style = "animation:fade-basic 1s backwards;"
         })
     }
 

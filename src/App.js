@@ -7,6 +7,10 @@ import PortfolioBar from "./components/jsx/PortfolioBar"
 import Home from './components/views/Home'
 import Testimonials from './components/views/Testimonials'
 import Contact from './components/views/Contact'
+import projects from '../src/data/projects.json'
+import stories from '../src/data/stories.json'
+
+
 
 
 function App() {
@@ -35,6 +39,15 @@ function App() {
       
       resize();
 
+      //preloading images
+      projects.forEach(project => {
+        const img = new Image();
+        img.src = "/assets/images/" + project.image
+      });
+      stories.forEach(story => {
+        const img = new Image();
+        img.src = "/assets/images/" + story.image
+      });
 
   },[])
 

@@ -208,10 +208,10 @@ export default props=>{
     const [transition1, setTransition1] = useState(null);
 
     useEffect(()=>{
-        projects.forEach(project => {
-            const img = new Image();
-            img.src = "/assets/images/" + project.image
-        });
+        // projects.forEach(project => {
+        //     const img = new Image();
+        //     img.src = "/assets/images/" + project.image
+        // });
     },[])
 
     const activeListStyle = {
