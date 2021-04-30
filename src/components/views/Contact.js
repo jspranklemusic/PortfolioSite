@@ -145,7 +145,7 @@ const Contact = ()=>{
            
 
             <H1>Let's get in touch.</H1>
-            <Form>
+            <Form onSubmit={submitForm}>
                     
                     <div className="form-control">
                         <label htmlFor="name">Name<span style={{color:"red"}}>*</span></label>
