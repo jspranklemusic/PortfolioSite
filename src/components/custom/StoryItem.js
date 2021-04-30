@@ -26,6 +26,12 @@ const StoryItem = styled.div`
         color:var(--darkskyblue);
         font-weight:bold;
         text-decoration:none;
+        &:hover{
+                opacity:0.7;
+            }
+            &:active{
+                opacity:0.4;
+            }
     }
 `
 

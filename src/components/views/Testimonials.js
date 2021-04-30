@@ -7,19 +7,19 @@ import stories from '../../data/stories.json'
 
 const Div = styled.div`
     width:100%;
-    height:100%;
+    height:auto;
     display:grid;
     grid-template-columns:1fr 1fr;
     grid-auto-rows:100%;
     animation:fade-basic 0.6s backwards;
     animation-delay:0.15s;
     column-gap:2rem;
+    row-gap:1rem;
     justify-content:center;
 
     @media only screen and (max-width:600px){
         grid-template-columns:100%;
-        grid-template-rows:1fr 5fr;
-        
+        grid-template-rows:auto;
     }
     
     .left{
@@ -59,6 +59,7 @@ const Div = styled.div`
         overflow-y:scroll;
         overflow-x:hidden;
         width:100%;
+        
         @media only screen and (max-width:600px){
             order:2;
         }
@@ -91,7 +92,7 @@ const Testimonials = props=>{
                         <h4>{story.project}</h4>
                         <img src={"/assets/images/"+story.image} alt=""/>
                         <p>{story.story}</p>
-                        <a href={story.link}>View Project</a>
+                        <a target="_blank" href={story.link}>View Project</a>
                         
                     </StoryItem>
                 ))}

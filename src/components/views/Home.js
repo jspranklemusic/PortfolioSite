@@ -7,9 +7,11 @@ const Div = styled.div`
     grid-template-columns:50% 50%;
     grid-auto-rows:100%;
     width:100%;
-    height:100%;
     animation:fade-basic 0.6s backwards;
     animation-delay:0.15s;
+    height:auto;
+    margin-bottom:2rem;
+    
 
     .image-wrapper{
             width:35vw;
@@ -43,8 +45,8 @@ const Div = styled.div`
         padding:1rem;
         animation:slide-left 0.6s backwards;
         animation-delay:0.25s;
-        height:100%;
-        overflow-y:scroll;
+        height:auto;
+        
         
 
         h1{

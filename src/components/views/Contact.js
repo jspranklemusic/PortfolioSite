@@ -6,7 +6,7 @@ const Div = styled.div`
     animation:fade-basic 0.6s backwards;
     animation-delay:0.15s;
     width:100%;
-    height:100%;
+    height:95%;
 `
 
 const H1 = styled.h1`
