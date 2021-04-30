@@ -99,7 +99,19 @@ const Form = styled.form`
                 border:2px solid var(--darkskyblue);
             }
         }
+        
+        .links{
+            margin:1rem 0;
+            width:100%;
+            display:flex;
+            justify-content:center;
 
+            & > *{
+                flex:0;
+                margin:0 0.5rem;
+            }
+
+        }
     
 `
 
@@ -166,16 +178,19 @@ const Contact = ()=>{
 
     return(
         <Div>
-           
             
-            {!submitted && <H1>Let's get in touch.</H1>}
+            <div style={{height:"100%"}}>
+
             {submitted && <div>
                 <h1>Thank you for your submission!</h1>
                 <p>I will be in touch with you shortly.</p>
                 </div>}
             {!submitted && <Form name="contact" data-netlify="true" onSubmit={submitForm}>
             <input name="form-name" value="Netlify Rocks" type="hidden" />
-                    
+                    <h1>Let's get in touch.</h1>
+                    <div className="links">
+                        <a href="#">Github</a> <a href="#">LinkedIn</a> <a href="mailto:jspranklemusic@gmail.com">Email</a>
+                    </div>
                     <div className="form-control">
                         <label htmlFor="name">Name<span style={{color:"red"}}>*</span></label>
                         <input is_error="false" onBlur={validate} required onInput={submitHandler} name="name" id="name" type="text"/>
@@ -203,6 +218,9 @@ const Contact = ()=>{
                     
 
             </Form>}
+            </div>
+           
+          
         </Div>
     )
 }

@@ -42,7 +42,7 @@ function hashState(){
 
 useEffect(()=>{
     window.addEventListener('popstate',hashState)
-    setHash(window.location.hash);
+    setHash(window.location.hash || "#home");
 },[])
 
 

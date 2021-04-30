@@ -44,6 +44,19 @@ html,body{
   height:100%;
 }
 
+a{
+  text-decoration:none;
+  flex:1;
+  color:var(--darkskyblue);
+  font-weight:bold;
+}
+
+a:hover{
+  opacity:0.7;
+}
+a:active{
+  opacity:0.4;
+}
 
 .App {
   text-align: center;
