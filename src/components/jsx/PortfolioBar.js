@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 // import IconSelector from '../custom/IconSelector'
 import projects from '../../data/projects.json'
@@ -207,6 +207,13 @@ export default props=>{
     const [selectedProject, setSelectedProject] = useState(projects[0]);
     const [transitionProject, setTransitionProject] = useState(projects[1])
     const [transition1, setTransition1] = useState(null);
+
+    useEffect(()=>{
+        projects.forEach(project => {
+            const img = new Image();
+            img.src = "/assets/images/" + project.image
+        });
+    },[])
 
     const activeListStyle = {
         transition:"0.4s",
