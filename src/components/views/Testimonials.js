@@ -71,8 +71,6 @@ const Div = styled.div`
            border-radius:50%;
            height:100px;
            object-fit:cover;
-
-            
         }
     }
 `
