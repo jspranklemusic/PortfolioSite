@@ -30,8 +30,8 @@ const PortfolioBar = styled.section`
     .left{
         height:100%;
         width:100%;
-        border-right:5px solid var(--lightblue);
         box-sizing:border-box;
+        border-right:2px solid rgba(200,200,200,.2);
     
         @media only screen and (max-width:600px){
             border-right:none;
@@ -63,6 +63,7 @@ const PortfolioBar = styled.section`
             .text-container{
                 align-self:flex-start;
                 height:100%;
+                width:100%;
                 display:flex;
                 flex-direction:column;
         
@@ -115,7 +116,7 @@ const PortfolioBar = styled.section`
             height:200px;
             object-fit:cover;
             border-radius:5%;
-            box-shadow:15px 15px 0px rgba(200,200,200);
+            box-shadow:1rem 1rem 0px rgba(200,200,200);
             border:4px solid white;
             margin:1rem;
             
@@ -144,7 +145,6 @@ const PortfolioBar = styled.section`
 
     .right{
         padding-bottom:3.25rem;
-        border-left:5px solid var(--lightblue);
         height:100%;
         display:grid;
         grid-template-rows:1fr 6fr;
@@ -195,7 +195,6 @@ const PortfolioBar = styled.section`
 
     .button-wrapper{
     transform:translateY(-100%);
-    border-left:5px solid transparent;
         @media only screen and (max-width:600px){
             border-left:none;
             transform:translateY(-100%);

@@ -63,7 +63,7 @@
  
     {
         "name":"Tic-Tac-Toe",
-        "description":"A tic-tac-toe program with a simple AI, made in vanilla JS.",
+        "description":"A tic-tac-toe program with, made in vanilla JS. It features an optional computer opponent, with a simple minimax AI.",
         "link":"https://tictactoe-jds.netlify.app/",
         "image":"tictactoe.png"
     },
