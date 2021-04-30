@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import IconSelector from '../custom/IconSelector'
+// import IconSelector from '../custom/IconSelector'
 import projects from '../../data/projects.json'
 import Button from '../jsx/Button'
 
