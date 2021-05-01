@@ -16,6 +16,8 @@ const Div = styled.div`
     .image-wrapper{
             width:35vw;
             height:35vw;
+            max-height:450px;
+            max-width:450px;
             border-radius:50%;
             overflow:hidden;
             display:flex;
@@ -25,8 +27,8 @@ const Div = styled.div`
         }
 
         img{
-            width:200%;
-            height:200%;
+            width:170%;
+            height:170%;
             margin-top:25%;
             object-fit:cover;
             filter:grayscale(100%) contrast(1.2);
@@ -119,7 +121,7 @@ const Home = props=>{
                  My name is Josiah, and I am a freelance web developer with a passion for bringing new projects to life! I enjoy coding because it combines creativity and problem-solving. I have completed a diverse set of websites &amp; projects, ranging from small portfolio pages and band/musician websites to fully-fledged full stack applications with a user login and email system, and real-time chat.
                  </p>
                  <p>
-                 I specialize in MEVN or MERN fullstack Javascript development (MongoDB, Express, Vue/React, and Node.js), but I have worked with other tools such as SQL, Python, Flask, C++, and PHP. As a creative person, I realize the utmost importance of having a clean, beautiful UI. As a musician, one of my future goals is to gain a deeper understanding of computer science in order to make new contributions to the world of audio and music software.
+                 I specialize in MEVN or MERN fullstack Javascript development (MongoDB, Express, Vue/React, and Node.js), but I have worked with other tools such as SQL, Python, Flask, C++, and PHP. In addition to coding, I am also a classically-trained pianist and composer with a Bachelor of Music from the University of Missouri, Kansas City. If you're interested, you can check out my <a href="https://josiahspranklemusic.com/app/">music site</a> or my <a href="https://www.youtube.com/user/Kopaka0111/videos">YouTube</a> page. I'm also a husband to a beautiful wife and father to a happy son.
                  </p>
                  <br/>
                  <Button onClick={goToPage}>What Others Say About Me</Button>
