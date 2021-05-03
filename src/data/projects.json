@@ -4,7 +4,7 @@
         "description":"A simple, easy-to-use web application for taking notes, making study flashcards, and being productive. It features secure password storage, a smooth interface, and a user login system. Built with Vue, Sass, and Netlify serverless lambda functions. ",
         "link":"https://myflashcards.netlify.app/",
         "image":"myflashcards.png",
-        "langs":["vue","html","css","javascript","mongodb"]
+        "langs":["vue","html","css","mongodb"]
     },
     {
         "name":"Interactive COVID-19 Map (USA)",
