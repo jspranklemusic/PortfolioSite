@@ -22,8 +22,10 @@ const Div = styled.div`
             overflow:hidden;
             display:flex;
             align-items:center;
-            margin:1rem auto;
+            margin:2rem auto;
             justify-content:center;
+            border:0.5rem solid white;
+            box-shadow:0 0 0 0.6rem var(--darkskyblue);
         }
 
         img{
@@ -56,25 +58,29 @@ const Div = styled.div`
         }
         h3{
             font-weight:100;
-            font-size:1.75rem;
-            opacity:0.5;
+            font-size:2rem;
+            opacity:0.75;
+            width:max-content;
+            margin:0 auto;
         }
         p{
             padding:1rem;
             line-height:1.5rem;
             text-align:left;
+            font-size:1.1rem;
             text-indent:2rem;
         }
         button{
             background:var(--darkskyblue);
             padding:1rem 2rem;
             margin:1rem auto;
-            font-size:1rem;
+            font-size:1.1rem;
             border:none;
             color:white;
             font-weight:500;
             border-radius:5px;
             transition:0.3s;
+        
             cursor:pointer;
 
             &:hover{
@@ -100,6 +106,50 @@ const Div = styled.div`
 
        
     }
+    .icons-bar{
+        font-size:1.75rem;
+        display:flex;
+        justify-content:center;
+        width:50%;
+        margin:1rem auto;
+
+
+        &>*{
+            display:flex;
+            flex:0;
+            align-items:center;
+            justify-content:center;
+            color:rgb(200,200,200);
+            transition:0.2s;
+            flex-basis:3rem;
+            width:3rem;
+            height:3rem;
+            border-radius:50%;
+            margin:0 0.5rem;
+            border:2px solid rgb(220,220,220);
+            box-shadow:0 0 0 0px skyblue;
+
+            &>*{
+                    transition:0.2s ;
+                }
+
+            &:hover{
+                border:5px solid var(--lightblue);
+                color:var(--darkskyblue);
+                box-shadow:0 0 0 5px skyblue;
+
+              
+
+                &>*{
+                    transform:scale(0.5) translate(0,0);
+                }
+            }
+
+            
+
+        }
+
+    }
 `
 
 
@@ -117,11 +167,17 @@ const Home = props=>{
                  <div className="image-wrapper mobile-only-flex">
                       <img src="/assets/images/profile-takenbyannie.jpg" alt=""/>
                 </div>
+                <div className="icons-bar">
+                    <a target="_blank" href="https://github.com/jspranklemusic"><i class="fab fa-github"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/josiah-sprankle-8862a1103/"><i class="fab fa-linkedin"></i></a>
+                    <a target="_blank" href="https://codepen.io/josiah-sprankle"><i class="devicon-codepen-plain"></i></a>
+                
+                </div>
                  <p>
-                 My name is Josiah, and I am a freelance web developer with a passion for bringing new projects to life! I enjoy coding because it combines creativity and problem-solving. I have completed a diverse set of websites &amp; projects, ranging from small portfolio pages and band/musician websites to fully-fledged full stack applications with a user login and email system, and real-time chat.
+                 My name is Josiah, and I am a full stack web developer with a passion for bringing new projects to life! I enjoy coding because it combines creativity and problem-solving. I have completed a diverse set of websites &amp; projects, ranging from small portfolio pages and band/musician websites to fully-fledged full stack applications with a user login and email system, and real-time chat.
                  </p>
                  <p>
-                 I specialize in MEVN or MERN fullstack Javascript development (MongoDB, Express, Vue/React, and Node.js), but I have worked with other tools such as SQL, Python, Flask, C++, and PHP. In addition to coding, I am also a classically-trained pianist and composer with a Bachelor of Music from the University of Missouri, Kansas City. If you're interested, you can check out my <a href="https://josiahspranklemusic.com/app/">music site</a> or my <a href="https://www.youtube.com/user/Kopaka0111/videos">YouTube</a> page. I'm also a husband to a beautiful wife and father to a happy son.
+                 I specialize in MEVN or MERN fullstack Javascript development (MongoDB, Express, Vue/React, and Node.js), but I have worked with other tools such as SQL, Python, Flask, C++, and PHP. In addition to coding, I am also a father to a happy son and husband to a beautiful wife. I'm also a classically-trained pianist and composer with a Bachelor of Music from the University of Missouri, Kansas City. If you're interested, you can check out my <a href="https://josiahspranklemusic.com/app/">music site</a> or my <a href="https://www.youtube.com/user/Kopaka0111/videos">YouTube</a> page. 
                  </p>
                  <br/>
                  <Button onClick={goToPage}>What Others Say About Me</Button>
@@ -133,7 +189,7 @@ const Home = props=>{
                   
             </div>
             
-           
+            
         </Div>
         
     )

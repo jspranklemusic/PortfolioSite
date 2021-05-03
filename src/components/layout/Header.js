@@ -7,6 +7,7 @@ const HeaderContainer = styled.header`
     height:3rem;
     display:flex;
     width:100%;
+    font-size:1.1rem;
     justify-content:flex-start;
     align-items:center;
     position:fixed;
@@ -18,7 +19,7 @@ const HeaderContainer = styled.header`
         text-decoration:none;
         transition:0.2s;
         font-weight:bold;
-        margin:0 1rem;
+        margin:0 0.8rem;
         flex:0;
 
         &:hover{

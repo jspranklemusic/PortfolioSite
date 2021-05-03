@@ -13,14 +13,18 @@ const StoryItem = styled.div`
     & > *{
         margin:0.25rem 0;
     }
+    h3{
+        font-size:1.25rem;
+    }
 
     h4{
         color:rgba(100,100,100,.7);
         font-weight:400;
-        font-size:0.95rem;
+        font-size:1.1rem;
     }
     p{
         padding:1rem;
+        font-size:1.1rem;
     }
     a{
         color:var(--darkskyblue);

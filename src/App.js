@@ -11,8 +11,6 @@ import projects from '../src/data/projects.json'
 import stories from '../src/data/stories.json'
 
 
-
-
 function App() {
 
   const [hash, setHash] = useState("#home")
@@ -68,9 +66,11 @@ function App() {
         { hash == "#portfolio" && <PortfolioBar></PortfolioBar>}
         { hash == "#testimonials" && <Testimonials></Testimonials>}
         { hash == "#contact" && <Contact></Contact>}
+        <div style={{height:"1rem"}}></div>
+        
       </main>
       
-      
+
       
     </div>
   );
