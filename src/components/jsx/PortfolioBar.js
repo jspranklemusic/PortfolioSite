@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
-// import IconSelector from '../custom/IconSelector'
-import projects from '../../data/projects.json'
+import IconSelector from '../custom/IconSelector'
+import projectsList from '../../data/projects.json'
 import Button from '../jsx/Button'
 
 const default_png = "defaultcode.png"
@@ -203,15 +203,17 @@ const PortfolioBar = styled.section`
 
 `
 export default props=>{
+    const [projects, setProjects] = useState(projectsList)
     const [selectedProject, setSelectedProject] = useState(projects[0]);
     const [transitionProject, setTransitionProject] = useState(projects[1])
     const [transition1, setTransition1] = useState(null);
 
+
     useEffect(()=>{
-        // projects.forEach(project => {
-        //     const img = new Image();
-        //     img.src = "/assets/images/" + project.image
-        // });
+        projects.forEach(project => {
+            const img = new Image();
+            img.src = "/assets/images/" + project.image
+        });
     },[])
 
     const activeListStyle = {
@@ -230,6 +232,23 @@ export default props=>{
     const arrivedStyle = {
         opacity:1,
         zIndex:2
+    }
+
+    function filterProject(langs = []){
+        if(!langs.length){
+            setProjects(projectsList);
+        }else{
+            setProjects(
+                projectsList.filter(project=>{ 
+                    for(let lang of langs){
+                        if(!project.langs.includes(lang)){
+                            return false;
+                        }
+                    }
+                    return true;
+                })
+               )  
+        }
     }
     
 
@@ -300,7 +319,7 @@ export default props=>{
 
                 </ul>
             </div>
-            {/* <IconSelector></IconSelector> */}
+            <IconSelector filterProject = {filterProject}></IconSelector>
             <div className="empty-grid-filler"></div>
             
             <div className="button-wrapper">

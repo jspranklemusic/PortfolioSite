@@ -14,9 +14,9 @@ const mysql = '/assets/icons/mysql/mysql-plain.svg'
 const IconSelector = styled.div`
 
     width:100%;
-    max-width:max-content;
+    max-width:600px;
     height:3rem;
-    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8));
+    background:linear-gradient(rgba(235,235,235,.6),white);
     border-radius:100px;
     position:absolute;
     bottom:-5rem;
@@ -25,13 +25,14 @@ const IconSelector = styled.div`
     display:flex;
     align-items:center;
     justify-content:space-evenly;
-    box-shadow:0 0 10px rgba(0,0,0,.5);
+    box-shadow:3px 3px 10px -5px rgba(0,0,0,.5);
+    overflow:hidden;
 
     img{
-        height:2rem;
-        width:2rem;
+        height:1.75rem;
+        width:1.75rem;
         transition:0.2s;
-        margin:0rem 1rem;
+        margin:0rem 0.3rem;
 
     }
     div{
@@ -40,13 +41,13 @@ const IconSelector = styled.div`
         justify-content:center;
         flex:1;
         height:100%;
-        transition:0.18s;
+        transition:0.15s;
         backface-visibility:hidden;
         cursor:pointer;
         &:hover >*{
-            transform:translateY(-8px) translateX(0px) scale(1.75) ;
-            
+            transform:scale(1.7);
         }
+
     }
 `
 
@@ -55,16 +56,19 @@ export default props=>{
     const [selectedIMG, setSelectedIMG] = useState([])
 
     function selectImage(img=""){
-        setSelectedIMG([...selectedIMG, img]);
+        let arr = [...selectedIMG, img]
+        setSelectedIMG(arr);
+        props.filterProject(arr);
     }
 
     function unselectImage(img=""){
         let arr = selectedIMG.filter(image=>image!=img);
         setSelectedIMG(arr);
+        props.filterProject(arr);
     }
 
     const activeStyle = {
-        background:'rgba(255,255,255,.3)'
+        background:"#80a7bf"
     }
 
     const inactiveStyle = {
@@ -73,6 +77,14 @@ export default props=>{
     
     return(
         <IconSelector>
+             <div 
+                style={selectedIMG.includes("node") ? activeStyle : inactiveStyle }
+                onClick={!selectedIMG.includes("node") ? 
+                ()=>{selectImage("node")} : 
+                ()=>{unselectImage("node")}}
+            >
+                 <img src={node} />
+            </div>
             <div 
                 style={selectedIMG.includes("javascript") ? activeStyle : inactiveStyle }
                 onClick={!selectedIMG.includes("javascript") ? 
@@ -81,14 +93,7 @@ export default props=>{
             >
                  <img src={javascript} />
             </div>
-            <div 
-                style={selectedIMG.includes("node") ? activeStyle : inactiveStyle }
-                onClick={!selectedIMG.includes("node") ? 
-                ()=>{selectImage("node")} : 
-                ()=>{unselectImage("node")}}
-            >
-                 <img src={node} />
-            </div>
+         
             <div 
                 style={selectedIMG.includes("html") ? activeStyle : inactiveStyle }
                 onClick={!selectedIMG.includes("html") ? 
