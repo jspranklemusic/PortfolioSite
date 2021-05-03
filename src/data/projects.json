@@ -6,10 +6,28 @@
         "image":"myflashcards.png"
     },
     {
+        "name":"Interactive COVID-19 Map (USA)",
+        "description":"An interactive visualization of COVID-19 deaths and cases in the United States. Results are available by state, with either daily cases or total cases. The user interface was made with Vue.js, and the graphs were made with CSS and Javascript.",
+        "link":"https://coronavirus-usa.netlify.app/",
+        "image":"covid-map.png"
+    },
+    {
         "name":"Word Unscrambler",
         "description":"A word-unscrambling algorithm that uses Node.js, Cheerio, and Axios for dictionary lookup via web-scraping.",
         "link":"https://wordunscramblerapi.josiahsprankle.repl.co/",
         "image":""
+    },
+    {
+        "name":"Social Media Website",
+        "description":"A MEVN Stack social media application, featuring custom image uploads, user authentication, logins, and password encryption. Additional features are the ability to like and comment on posts, create a custom user profile, request friends, and have real-time chat. ",
+        "link":"https://zipp.josiahsprankle.repl.co/",
+        "image":"zipp.png"
+    },
+    {
+        "name":"2-Player Chess",
+        "description":"A real-time, 2-player chess application with game clock, move notation, custom room codes, and a working implementation of the rules.",
+        "link":"https://2playerchess.josiahsprankle.repl.co/",
+        "image":"chess-pic.png"
     },
     {
         "name":"Exalted Christian Band",
@@ -35,24 +53,6 @@
         "description":"A music portfolio SPA website with e-commerce, a shopping cart, media playback, a custom PDF viewer, custom email templating, and encrypted downloads. I built this website with the MEVN stack top-to-bottom, utilizing the PayPal API for secure payments. ",
         "link":"http://www.josiahspranklemusic.com/",
         "image":"jds-music-pic.png"
-    },
-    {
-        "name":"Social Media Website",
-        "description":"A MEVN Stack social media application, featuring custom image uploads, user authentication, logins, and password encryption. Additional features are the ability to like and comment on posts, create a custom user profile, request friends, and have real-time chat. ",
-        "link":"https://zipp.josiahsprankle.repl.co/",
-        "image":"zipp.png"
-    },
-    {
-        "name":"2-Player Chess",
-        "description":"A real-time, 2-player chess application with game clock, move notation, custom room codes, and a working implementation of the rules.",
-        "link":"https://2playerchess.josiahsprankle.repl.co/",
-        "image":"chess-pic.png"
-    },
-    {
-        "name":"Interactive COVID-19 Map (USA)",
-        "description":"An interactive visualization of COVID-19 deaths and cases in the United States. Results are available by state, with either daily cases or total cases. The user interface was made with Vue.js, and the graphs were made with CSS and Javascript.",
-        "link":"https://coronavirus-usa.netlify.app/",
-        "image":"covid-map.png"
     },
     {
         "name":"Trackful",
