@@ -32,6 +32,7 @@ const PortfolioBar = styled.section`
         width:100%;
         box-sizing:border-box;
         border-right:2px solid rgba(200,200,200,.2);
+        overflow:hidden;
     
         @media only screen and (max-width:600px){
             border-right:none;
@@ -207,6 +208,10 @@ export default props=>{
     const [selectedProject, setSelectedProject] = useState(projects[0]);
     const [transitionProject, setTransitionProject] = useState(projects[1])
     const [transition1, setTransition1] = useState(null);
+    const [isMoving, setIsMoving] = useState(false);
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [prevIndex, setPrevIndex] = useState(-1);
 
 
     useEffect(()=>{
@@ -224,14 +229,21 @@ export default props=>{
         transition:"0s",
     }
 
-    const transitioningStyle = {
+    const nextStyle = {
         opacity:0,
-        zIndex:1
+        transform:"translateX(-400px)"
+   
+    }
+
+    const prevStyle = {
+        opacity:0,
+        transform:"translateX(400px)"
     }
 
     const arrivedStyle = {
         opacity:1,
-        zIndex:2
+        transform:"translateX(0rem)"
+   
     }
 
     function filterProject(langs = []){
@@ -253,14 +265,23 @@ export default props=>{
     
 
     function selectProjectHandler(ind){
+        
+        if(isMoving) return;
+
         if(transition1){
             if(projects[ind].name == transitionProject.name) return;
+            setIsMoving(true);
+            setTimeout(()=>{setIsMoving(false)},500)
             setSelectedProject(projects[ind]);
             setTransition1(false);
+           
         }else{
             if(projects[ind].name == selectedProject.name) return;
+            setIsMoving(true);
+            setTimeout(()=>{setIsMoving(false)},500)
             setTransitionProject(projects[ind]);
             setTransition1(true);
+            
         }
     }
 
@@ -268,7 +289,13 @@ export default props=>{
         <PortfolioBar>
             <div className="left">
 
-                <div style={ !transition1 ? arrivedStyle : transitioningStyle } className="left-inner-1">
+                <div style={ 
+                    !transition1 ? arrivedStyle : 
+                    prevIndex < currentIndex && !isMoving ? prevStyle :
+                    prevIndex > currentIndex && !isMoving ? nextStyle :
+                    prevIndex < currentIndex && isMoving ? nextStyle :
+                    prevStyle 
+                    } className="left-inner-1">
                     <div>
                      <img src={selectedProject.image ? "/assets/images/" + selectedProject.image : "/assets/images/" + default_png} alt=""/>
                     </div>
@@ -284,7 +311,13 @@ export default props=>{
                    
                 </div>
 
-                <div style={ transition1 ? arrivedStyle : transitioningStyle } className="left-inner-1">
+                <div style={ 
+                      transition1 ? arrivedStyle : 
+                      prevIndex < currentIndex && !isMoving ? prevStyle :
+                      prevIndex > currentIndex && !isMoving ? nextStyle :
+                      prevIndex < currentIndex && isMoving ? nextStyle :
+                      prevStyle 
+                    } className="left-inner-1">
                     <div>
                      <img src={transitionProject.image ? "/assets/images/" + transitionProject.image :  "/assets/images/" + default_png} alt=""/>
                     </div>
