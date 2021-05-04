@@ -5,7 +5,6 @@ import projectsList from '../../data/projects.json'
 import Button from '../jsx/Button'
 
 const default_png = "defaultcode.png"
-
 const PortfolioBar = styled.section`
     background:white;
     width:100%;
@@ -203,6 +202,8 @@ const PortfolioBar = styled.section`
     }
 
 `
+
+
 export default props=>{
     const [projects, setProjects] = useState(projectsList)
     const [selectedProject, setSelectedProject] = useState(projects[0]);
@@ -210,6 +211,7 @@ export default props=>{
     const [transition1, setTransition1] = useState(null);
     const [isMoving, setIsMoving] = useState(false);
 
+    const [canClick, setCanClick] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [prevIndex, setPrevIndex] = useState(-1);
 
@@ -269,12 +271,17 @@ export default props=>{
 
     function selectProjectHandler(ind){
         
-        if(isMoving) return;
+        if(!canClick) return;
+
+        setCanClick(false);
+        // setPrevIndex(currentIndex)
+        // setCurrentIndex(ind);
 
         if(transition1){
             if(projects[ind].name == transitionProject.name) return;
             setIsMoving(true);
             setTimeout(()=>{setIsMoving(false)},500)
+            setTimeout(()=>{setCanClick(true)},800)
             setSelectedProject(projects[ind]);
             setTransition1(false);
            
@@ -282,6 +289,7 @@ export default props=>{
             if(projects[ind].name == selectedProject.name) return;
             setIsMoving(true);
             setTimeout(()=>{setIsMoving(false)},500)
+            setTimeout(()=>{setCanClick(true)},800)
             setTransitionProject(projects[ind]);
             setTransition1(true);
             
