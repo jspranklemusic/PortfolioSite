@@ -231,18 +231,21 @@ export default props=>{
 
     const nextStyle = {
         opacity:0,
-        transform:"translateX(-400px)"
+        transform:"translateX(-400px)",
+        zIndex:1
    
     }
 
     const prevStyle = {
         opacity:0,
-        transform:"translateX(400px)"
+        transform:"translateX(400px)",
+        zIndex:1
     }
 
     const arrivedStyle = {
         opacity:1,
-        transform:"translateX(0rem)"
+        transform:"translateX(0rem)",
+        zIndex:2
    
     }
 
