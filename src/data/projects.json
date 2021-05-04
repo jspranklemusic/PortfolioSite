@@ -25,7 +25,7 @@
         "description":"A typing test that checks your accuracy, speed, and returns an adjusted WPM score. Made with React.",
         "link":"https://wpm-speed-test.netlify.app/",
         "image":"typetest.png",
-        "langs":["React","css","html"]
+        "langs":["react","css","html"]
     },
     {
         "name":"Social Media Website",
