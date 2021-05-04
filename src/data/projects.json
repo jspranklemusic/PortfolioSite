@@ -21,6 +21,13 @@
         "langs":["node","javascript","html","express"]
     },
     {
+        "name":"Typing Speed Test",
+        "description":"A typing test that checks your accuracy, speed, and returns an adjusted WPM score. Made with React.",
+        "link":"https://wpm-speed-test.netlify.app/",
+        "image":"typetest.png",
+        "langs":["React","css","html"]
+    },
+    {
         "name":"Social Media Website",
         "description":"A MEVN Stack social media application, featuring custom image uploads, user authentication, logins, and password encryption. Additional features are the ability to like and comment on posts, create a custom user profile, request friends, and have real-time chat. ",
         "link":"https://zipp.josiahsprankle.repl.co/",
