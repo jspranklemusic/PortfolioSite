@@ -270,7 +270,7 @@ export default props=>{
 
                 <div style={ !transition1 ? arrivedStyle : transitioningStyle } className="left-inner-1">
                     <div>
-                     <img loading="lazy" src={selectedProject.image ? "/assets/images/" + selectedProject.image : "/assets/images/" + default_png} alt=""/>
+                     <img src={selectedProject.image ? "/assets/images/" + selectedProject.image : "/assets/images/" + default_png} alt=""/>
                     </div>
                     
                     <div className="text-container">
@@ -286,7 +286,7 @@ export default props=>{
 
                 <div style={ transition1 ? arrivedStyle : transitioningStyle } className="left-inner-1">
                     <div>
-                     <img loading="lazy" src={transitionProject.image ? "/assets/images/" + transitionProject.image :  "/assets/images/" + default_png} alt=""/>
+                     <img src={transitionProject.image ? "/assets/images/" + transitionProject.image :  "/assets/images/" + default_png} alt=""/>
                     </div>
                     
                     <div className="text-container">
