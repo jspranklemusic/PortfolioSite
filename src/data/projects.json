@@ -28,6 +28,13 @@
         "langs":["react","css","html"]
     },
     {
+        "name":"My Job Search",
+        "description":"A class-based web-scraping tool that searches Indeed, FlexJobs, and SimplyHired for job postings. Made with Cheerio, Node.js, Express, and React.",
+        "link":"https://jobsearchwebscraper.josiahsprankle.repl.co/",
+        "image":"jobsearch.png",
+        "langs":["react","node,","css","html"]
+    },
+    {
         "name":"Social Media Website",
         "description":"A MEVN Stack social media application, featuring custom image uploads, user authentication, logins, and password encryption. Additional features are the ability to like and comment on posts, create a custom user profile, request friends, and have real-time chat. ",
         "link":"https://zipp.josiahsprankle.repl.co/",
