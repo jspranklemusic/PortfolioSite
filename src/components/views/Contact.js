@@ -9,10 +9,6 @@ const Div = styled.div`
     height:95%;
 `
 
-const H1 = styled.h1`
-    animation:slide-right 0.6s backwards;
-`
-
 const Spinner = styled.div`
     margin:1.5rem auto;
 
@@ -37,8 +33,8 @@ const Form = styled.form`
     margin:1rem auto;
     background:white;
     box-shadow:3px 3px 5px rgba(0,0,0,.25);
-    height:90%;
-    min-height:max-content;
+    height:95%;
+    min-height:500px;
     align-items:center;
     padding:1rem;
     border-radius:10px;
@@ -189,7 +185,9 @@ const Contact = ()=>{
             <input name="form-name" value="Netlify Rocks" type="hidden" />
                     <h1>Let's get in touch.</h1>
                     <div className="links">
-                        <a href="https://github.com/jspranklemusic">Github</a> <a href="https://www.linkedin.com/in/josiah-sprankle-8862a1103/">LinkedIn</a> <a href="mailto:jspranklemusic@gmail.com">Email</a>
+                        <a target="_blank" rel="noreferrer" href="https://github.com/jspranklemusic">Github</a> 
+                        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/josiah-sprankle-8862a1103/">LinkedIn</a> 
+                        <a href="mailto:jspranklemusic@gmail.com">Email</a>
                     </div>
                     <div className="form-control">
                         <label htmlFor="name">Name<span style={{color:"red"}}>*</span></label>

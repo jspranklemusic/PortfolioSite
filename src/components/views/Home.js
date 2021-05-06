@@ -168,9 +168,9 @@ const Home = props=>{
                       <img src="/assets/images/profile-takenbyannie.jpg" alt=""/>
                 </div>
                 <div className="icons-bar">
-                    <a target="_blank" href="https://github.com/jspranklemusic"><i class="fab fa-github"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/josiah-sprankle-8862a1103/"><i class="fab fa-linkedin"></i></a>
-                    <a target="_blank" href="https://codepen.io/josiah-sprankle"><i class="devicon-codepen-plain"></i></a>
+                    <a rel="noreferrer" target="_blank" href="https://github.com/jspranklemusic"><i class="fab fa-github"></i></a>
+                    <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/josiah-sprankle-8862a1103/"><i class="fab fa-linkedin"></i></a>
+                    <a rel="noreferrer" target="_blank" href="https://codepen.io/josiah-sprankle"><i class="devicon-codepen-plain"></i></a>
                 
                 </div>
                  <p>

@@ -51,7 +51,7 @@ const IconSelector = styled.div`
     }
 `
 
-export default props=>{
+const Selector =  props=>{
 
     const [selectedIMG, setSelectedIMG] = useState([])
 
@@ -62,7 +62,7 @@ export default props=>{
     }
 
     function unselectImage(img=""){
-        let arr = selectedIMG.filter(image=>image!=img);
+        let arr = selectedIMG.filter(image=>image!==img);
         setSelectedIMG(arr);
         props.filterProject(arr);
     }
@@ -83,7 +83,7 @@ export default props=>{
                 ()=>{selectImage("node")} : 
                 ()=>{unselectImage("node")}}
             >
-                 <img src={node} />
+                 <img alt="icon" src={node} />
             </div>
             <div 
                 style={selectedIMG.includes("javascript") ? activeStyle : inactiveStyle }
@@ -91,7 +91,7 @@ export default props=>{
                 ()=>{selectImage("javascript")} : 
                 ()=>{unselectImage("javascript")}}
             >
-                 <img src={javascript} />
+                 <img alt="icon" src={javascript} />
             </div>
          
             <div 
@@ -100,7 +100,7 @@ export default props=>{
                 ()=>{selectImage("html")} : 
                 ()=>{unselectImage("html")}}
             >
-                 <img src={html} />
+                 <img alt="icon" src={html} />
             </div>
             <div 
                 style={selectedIMG.includes("css") ? activeStyle : inactiveStyle }
@@ -108,7 +108,7 @@ export default props=>{
                 ()=>{selectImage("css")} : 
                 ()=>{unselectImage("css")}}
             >
-                 <img src={css} />
+                 <img alt="icon" src={css} />
             </div>
             <div 
                 style={selectedIMG.includes("vue") ? activeStyle : inactiveStyle }
@@ -116,7 +116,7 @@ export default props=>{
                 ()=>{selectImage("vue")} : 
                 ()=>{unselectImage("vue")}}
             >
-                 <img src={vue} />
+                 <img alt="icon" src={vue} />
             </div>
             <div 
                 style={selectedIMG.includes("react") ? activeStyle : inactiveStyle }
@@ -124,7 +124,7 @@ export default props=>{
                 ()=>{selectImage("react")} : 
                 ()=>{unselectImage("react")}}
             >
-                 <img src={react} />
+                 <img alt="icon" src={react} />
             </div>
             <div 
                 style={selectedIMG.includes("mongodb") ? activeStyle : inactiveStyle }
@@ -132,7 +132,7 @@ export default props=>{
                 ()=>{selectImage("mongodb")} : 
                 ()=>{unselectImage("mongodb")}}
             >
-                 <img src={mongodb} />
+                 <img alt="icon" src={mongodb} />
             </div>
             <div 
                 style={selectedIMG.includes("mysql") ? activeStyle : inactiveStyle }
@@ -140,7 +140,7 @@ export default props=>{
                 ()=>{selectImage("mysql")} : 
                 ()=>{unselectImage("mysql")}}
             >
-                 <img src={mysql} />
+                 <img alt="icon" src={mysql} />
             </div>
             <div 
                 style={selectedIMG.includes("python") ? activeStyle : inactiveStyle }
@@ -148,9 +148,11 @@ export default props=>{
                 ()=>{selectImage("python")} : 
                 ()=>{unselectImage("python")}}
             >
-                 <img src={python} />
+                 <img alt="icon" src={python} />
             </div>
             
         </IconSelector>
     )
 }
+
+export default Selector

@@ -92,7 +92,7 @@ const Testimonials = props=>{
                         <h4>{story.project}</h4>
                         <img loading="lazy" onLoad={imageFade} src={"/assets/images/"+story.image} alt=""/>
                         <p>{story.story}</p>
-                        <a target="_blank" href={story.link}>View Project</a>
+                        <a rel="noreferrer" target="_blank" href={story.link}>View Project</a>
                         
                     </StoryItem>
                 ))}

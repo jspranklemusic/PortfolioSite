@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import IconSelector from '../custom/IconSelector'
 import projectsList from '../../data/projects.json'
@@ -204,24 +204,15 @@ const PortfolioBar = styled.section`
 `
 
 
-export default props=>{
+const Bar = props=>{
     const [projects, setProjects] = useState(projectsList)
     const [selectedProject, setSelectedProject] = useState(projects[0]);
     const [transitionProject, setTransitionProject] = useState(projects[1])
     const [transition1, setTransition1] = useState(null);
     const [isMoving, setIsMoving] = useState(false);
-
     const [canClick, setCanClick] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [prevIndex, setPrevIndex] = useState(-1);
-
-
-    useEffect(()=>{
-        projects.forEach(project => {
-            const img = new Image();
-            img.src = "/assets/images/" + project.image
-        });
-    },[])
 
     const activeListStyle = {
         transition:"0.4s",
@@ -237,7 +228,6 @@ export default props=>{
         zIndex:1
    
     }
-
     const prevStyle = {
         opacity:0,
         transform:"translateX(400px)",
@@ -312,7 +302,7 @@ export default props=>{
                     </div>
                     
                     <div className="text-container">
-                        <a target="_blank" href={selectedProject.link || "#"}>
+                        <a rel="noreferrer" target="_blank" href={selectedProject.link || "#"}>
                         <h2>{selectedProject.name}</h2>
                         </a>
                         <p>
@@ -334,7 +324,7 @@ export default props=>{
                     </div>
                     
                     <div className="text-container">
-                        <a target="_blank" href={transitionProject.link || "#"}>
+                        <a target="_blank" rel="noreferrer" href={transitionProject.link || "#"}>
                         <h2>{transitionProject.name}</h2>
                         </a>
                         <p>
@@ -373,3 +363,5 @@ export default props=>{
         </PortfolioBar>
     )
 }
+
+export default Bar;

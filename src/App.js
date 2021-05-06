@@ -10,6 +10,18 @@ import Contact from './components/views/Contact'
 import projects from '../src/data/projects.json'
 import stories from '../src/data/stories.json'
 
+const svgs = {
+   javascript : '/assets/icons/javascript/javascript-original.svg',
+   node : '/assets/icons/nodejs/nodejs-original.svg',
+   html : '/assets/icons/html5/html5-original.svg',
+   css : '/assets/icons/css3/css3-original.svg',
+   vue : '/assets/icons/vuejs/vuejs-original.svg',
+   react : '/assets/icons/react/react-original.svg',
+   mongodb : '/assets/icons/mongodb/mongodb-original.svg',
+   python : '/assets/icons/python/python-original.svg',
+   mysql : '/assets/icons/mysql/mysql-plain.svg'
+}
+
 
 function App() {
 
@@ -37,15 +49,24 @@ function App() {
       
       resize();
 
+      window.images = {}
+
       //preloading images
       projects.forEach(project => {
         const img = new Image();
         img.src = "/assets/images/" + project.image
+        window.images[project.image] = img;
       });
       stories.forEach(story => {
         const img = new Image();
         img.src = "/assets/images/" + story.image
+        window.images[story.image] = img;
       });
+      for(let svg in svgs){
+        const img = new Image();
+        img.src = svgs[svg];
+        window.images[svgs[svg]] = img;
+      }
 
   },[])
 
@@ -62,10 +83,10 @@ function App() {
       <div name="grid-space-occupant"></div>
 
       <main id="content">
-        { hash == "#home" && <Home></Home>}
-        { hash == "#portfolio" && <PortfolioBar></PortfolioBar>}
-        { hash == "#testimonials" && <Testimonials></Testimonials>}
-        { hash == "#contact" && <Contact></Contact>}
+        { hash === "#home" && <Home></Home>}
+        { hash === "#portfolio" && <PortfolioBar></PortfolioBar>}
+        { hash === "#testimonials" && <Testimonials></Testimonials>}
+        { hash === "#contact" && <Contact></Contact>}
         <div style={{height:"1rem"}}></div>
         
       </main>
