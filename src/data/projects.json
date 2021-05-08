@@ -7,13 +7,6 @@
         "langs":["vue","html","css","mongodb"]
     },
     {
-        "name":"Interactive COVID-19 Map (USA)",
-        "description":"An interactive visualization of COVID-19 deaths and cases in the United States. Note: the API I am using only has data until March 2021. Results are available by state, with either daily cases or total cases. The user interface was made with Vue.js, and the graphs were made with CSS and Javascript.",
-        "link":"https://coronavirus-usa.netlify.app/",
-        "image":"covid-map.png",
-        "langs":["vue","html","css","javascript"]
-    },
-    {
         "name":"Word Unscrambler",
         "description":"A word-unscrambling algorithm that uses Node.js, Cheerio, and Axios for dictionary lookup via web-scraping.",
         "link":"https://wordunscramblerapi.josiahsprankle.repl.co/",
@@ -112,6 +105,4 @@
         "link":"https://github.com/jspranklemusic/Products-API",
         "langs":["mysql","node","express"]
     }
-   
-
 ]
