@@ -7,6 +7,13 @@
         "langs":["vue","html","css","mongodb"]
     },
     {
+        "name":"Maze Generator",
+        "description":"A maze generation algorithm that utilizes the recursive backtracking method, made with Javascript. It can seed a randomly-generated maze ranging from a width of 5 to 50 cells. ",
+        "link":"https://codepen.io/josiah-sprankle/full/dyvObEx",
+        "image":"maze.png",
+        "langs":["javascript","html","css"]
+    },
+    {
         "name":"Word Unscrambler",
         "description":"A word-unscrambling algorithm that uses Node.js, Cheerio, and Axios for dictionary lookup via web-scraping.",
         "link":"https://wordunscramblerapi.josiahsprankle.repl.co/",
