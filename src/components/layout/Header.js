@@ -14,6 +14,10 @@ const HeaderContainer = styled.header`
     top:0;
     left:0;
     z-index:100;
+
+    @media only screen and (max-width:600px){
+        justify-content:space-evenly;
+    }
     
     a{
         text-decoration:none;
