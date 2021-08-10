@@ -27,13 +27,23 @@ function App() {
 
   const [hash, setHash] = useState("#home")
   function hashState(){
-      setHash(window.location.hash)
+      const Content = document.querySelector(".fade-basic");
+      Content.classList.remove("fade-basic")
+      Content.classList.add("next-link")
+      console.log(Content)
+      
+      
+      setTimeout(()=>{
+        setHash(window.location.hash)
+        document.querySelector("main").scrollTo(0,0)
+      },300)
   }
 
   useEffect(()=>{
 
 
       window.addEventListener('popstate',hashState)
+        
         setHash(window.location.hash || "#home");
       function resize(){
         // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -87,7 +97,7 @@ function App() {
         { hash === "#portfolio" && <PortfolioBar></PortfolioBar>}
         { hash === "#testimonials" && <Testimonials></Testimonials>}
         { hash === "#contact" && <Contact></Contact>}
-        <div style={{height:"1rem"}}></div>
+      <div style={{height:"1rem"}}></div>
         
       </main>
       

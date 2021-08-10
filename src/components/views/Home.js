@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import Button from '../jsx/Button'
 
@@ -7,8 +7,6 @@ const Div = styled.div`
     grid-template-columns:50% 50%;
     grid-auto-rows:100%;
     width:100%;
-    animation:fade-basic 0.6s backwards;
-    animation-delay:0.15s;
     height:auto;
     margin-bottom:2rem;
     
@@ -47,8 +45,8 @@ const Div = styled.div`
         background:white;
         border-radius:10px;
         padding:1rem;
-        animation:slide-left 0.6s backwards;
-        animation-delay:0.25s;
+        // animation:slide-left 0.6s backwards;
+        // animation-delay:0.25s;
         height:auto;
         
         
@@ -98,8 +96,8 @@ const Div = styled.div`
         display:flex;
         align-items:center;
         justify-content:center;
-        animation:slide-right 0.6s backwards;
-        animation-delay:0.25s;
+        // animation:slide-right 0.6s backwards;
+        // animation-delay:0.25s;
             @media only screen and (max-width:600px){
             display:none;
         }
@@ -155,43 +153,46 @@ const Div = styled.div`
 
 const Home = props=>{
 
+    const [loaded, setLoaded] = useState(false);
     const goToPage = ()=>{
         window.location.hash="#testimonials"
     }
 
     return(
-        <Div>
-            <div className="left">
-                 <h1>Josiah Sprankle</h1>
-                 <h3>Web Developer</h3>
-                 <div className="image-wrapper mobile-only-flex">
-                      <img src="/assets/images/profile-takenbyannie.jpg" alt=""/>
-                </div>
-                <div className="icons-bar">
-                    <a rel="noreferrer" target="_blank" href="https://github.com/jspranklemusic"><i class="fab fa-github"></i></a>
-                    <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/josiah-sprankle-8862a1103/"><i class="fab fa-linkedin"></i></a>
-                    <a rel="noreferrer" target="_blank" href="https://codepen.io/josiah-sprankle"><i class="devicon-codepen-plain"></i></a>
-                
-                </div>
-                 <p>
-                 My name is Josiah, and I am a full stack web developer with a passion for bringing new projects to life! I enjoy coding because it combines creativity and problem-solving. I have completed a diverse set of websites &amp; projects, ranging from small portfolio pages and band/musician websites to fully-fledged full stack applications with a user login and email system, and real-time chat.
-                 </p>
-                 <p>
-                 I specialize in MEVN or MERN fullstack Javascript development (MongoDB, Express, Vue/React, and Node.js), but I have worked with other tools such as SQL, Python, Flask, C++, and PHP. In addition to coding, I am also a father to a happy son and husband to a beautiful wife. I'm also a classically-trained pianist and composer with a Bachelor of Music from the University of Missouri, Kansas City. If you're interested, you can check out my <a href="https://josiahspranklemusic.com/app/">music site</a> or my <a href="https://www.youtube.com/user/Kopaka0111/videos">YouTube</a> page. 
-                 </p>
-                 <br/>
-                 <Button onClick={goToPage}>What Others Say About Me</Button>
-            </div>
-            <div className="right">
-                    <div className="image-wrapper">
-                      <img src="/assets/images/profile-takenbyannie.jpg" alt=""/>
-                    </div>
-                  
-            </div>
+        <>
+             <Div className="fade-basic" style={{display:loaded ? "grid" : "none"}}>
             
-            
-        </Div>
+             <div className="left">
+                  <h1>Josiah Sprankle</h1>
+                  <h3>Web Developer</h3>
+                  <div className="image-wrapper mobile-only-flex">
+                       <img src="/assets/images/profile-takenbyannie.jpg" alt=""/>
+                 </div>
+                 <div className="icons-bar">
+                     <a rel="noreferrer" target="_blank" href="https://github.com/jspranklemusic"><i class="fab fa-github"></i></a>
+                     <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/josiah-sprankle-8862a1103/"><i class="fab fa-linkedin"></i></a>
+                     <a rel="noreferrer" target="_blank" href="https://codepen.io/josiah-sprankle"><i class="devicon-codepen-plain"></i></a>
+                 </div>
+                  <p>
+                  My name is Josiah, and I am a full stack web developer with a passion for bringing new projects to life! I enjoy coding because it combines creativity and problem-solving. I have completed a diverse set of websites &amp; projects, ranging from small portfolio pages and band/musician websites to fully-fledged full stack applications with authentication, emailing, and real-time chat.
+                  </p>
+                  <p>
+                  I am currently employed at <a rel="noreferrer" target="_blank"  href="https://hesonline.com/">Health Enhancment Systems (HES)</a>, where I work with an amazing team to build engaging fitness challenges with Ruby on Rails, AngularJS, and other tools. I also specialize in full stack Javascript development (aka, the "MERN" stack) for most of my personal projects. I am also a father to a happy son, a husband to a beautiful wife, a classically-trained pianist, and a composer with a Bachelor of Music from the University of Missouri, Kansas City. If you're interested, you can check out my <a href="https://josiahspranklemusic.com/app/">music site</a> or my <a href="https://www.youtube.com/user/Kopaka0111/videos">YouTube</a> page. 
+                  </p>
+                  <br/>
+                  <Button onClick={goToPage}>What Others Say About Me</Button>
+             </div>
+             <div className="right">
+                     <div className="image-wrapper">
+                       <img onLoad={()=>setLoaded(true)} src="/assets/images/profile-takenbyannie.jpg" alt=""/>
+                     </div>
+             </div>
+             
+             
+         </Div>
         
+       
+        </>
     )
 }
 

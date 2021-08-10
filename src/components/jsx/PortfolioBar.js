@@ -5,7 +5,7 @@ import projectsList from '../../data/projects.json'
 import Button from '../jsx/Button'
 
 const default_png = "defaultcode.png"
-const PortfolioBar = styled.section`
+const PortfolioBar = styled.div`
     background:white;
     width:100%;
     height:60%;
@@ -16,8 +16,6 @@ const PortfolioBar = styled.section`
     border-radius:10px;
     box-shadow:3px 3px 10px rgba(0,0,0,.3);
     background:linear-gradient(white 50%, rgba(225,225,225) 100%);
-    animation:fade-basic 0.6s backwards;
-    animation-delay:0.15s;
 
     @media only screen and (max-width:600px){
         grid-template-rows:50% 50%;
@@ -51,8 +49,6 @@ const PortfolioBar = styled.section`
             padding:1rem;
             overflow:hidden;
             transition:0.5s;
-            animation:slide-up 0.6s backwards;
-            animation-delay:0.15s;
 
             @media only screen and (max-width:600px){
                 padding-top:2rem;
@@ -155,14 +151,11 @@ const PortfolioBar = styled.section`
             border-left:none;
         }
 
-       
-
+    
         h2{
             text-align:center;
             font-size:2rem;
             padding:0.25rem 0;
-            animation:slide-up 0.6s backwards;
-            animation-delay:0.15s;
             @media only screen and (max-width:600px){
                 font-size:0.1px;
                 padding:0;
@@ -172,8 +165,6 @@ const PortfolioBar = styled.section`
         }
         ul{
             overflow-y:scroll;
-            animation:slide-up 0.6s backwards;
-            animation-delay:0.15s;
         }
         li{
             text-align:left;
@@ -287,7 +278,7 @@ const Bar = props=>{
     }
 
     return(
-        <PortfolioBar>
+        <PortfolioBar className="fade-basic">
             <div className="left">
 
                 <div style={ 

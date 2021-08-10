@@ -8,6 +8,7 @@
   font-family: 'Quicksand', sans-serif;
 }
 
+
 :root{
   --black:rgb(60, 60, 60);
   --darkgrey:rgb(80,80,80);
@@ -25,7 +26,7 @@ html,body{
   height: calc(var(--vh, 1vh) * 100);
   overflow:hidden;
   color:var(--black);
-  background:rgb(220, 220, 220);
+  background: radial-gradient(rgb(230, 230, 230),rgb(190, 190, 190));
   
 }
 
@@ -105,6 +106,15 @@ footer{
   color: #61dafb;
 }
 
+.fade-basic{
+  animation:fade-basic 0.3s backwards ease-out;
+  animation-delay:0.1s;
+}
+
+.next-link{
+  animation:next-link 0.15s forwards linear;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -117,9 +127,22 @@ footer{
 @keyframes fade-basic{
   0%{
     opacity:0;
+    transform:translateY(-2rem)
   }
   100%{
     opacity:1;
+    transform:translateY(0rem)
+  }
+}
+
+@keyframes next-link{
+  0%{
+    opacity:1;
+    transform:translateY(0rem)
+  }
+  100%{
+    opacity:0;
+    transform:translateY(2rem)
   }
 }
 

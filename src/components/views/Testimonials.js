@@ -11,8 +11,6 @@ const Div = styled.div`
     display:grid;
     grid-template-columns:1fr 1fr;
     grid-auto-rows:100%;
-    animation:fade-basic 0.6s backwards;
-    animation-delay:0.15s;
     column-gap:2rem;
     row-gap:1rem;
     justify-content:center;
@@ -26,8 +24,8 @@ const Div = styled.div`
         
         border-radius:10px;
         padding:1rem;
-        animation:slide-left 0.6s backwards;
-        animation-delay:0.25s;
+        // animation:slide-left 0.6s backwards;
+        // animation-delay:0.25s;
         
 
         h1{
@@ -53,8 +51,8 @@ const Div = styled.div`
         flex-direction:column;
         align-items:center;
         justify-content:flex-start;
-        animation:slide-right 0.6s backwards;
-        animation-delay:0.25s;
+        // animation:slide-right 0.6s backwards;
+        // animation-delay:0.25s;
         border-radius:10px;
         overflow-y:scroll;
         overflow-x:hidden;
@@ -83,7 +81,7 @@ const Testimonials = props=>{
     }
 
     return(
-        <Div>
+        <Div className="fade-basic">
            
             <div className="right">
                 {stories.map(story=>(

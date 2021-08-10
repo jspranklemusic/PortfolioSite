@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import Button from '../jsx/Button'
 
 const Div = styled.div`
-    animation:fade-basic 0.6s backwards;
-    animation-delay:0.15s;
     width:100%;
     height:95%;
 `
@@ -24,7 +22,7 @@ const Spinner = styled.div`
 `
 
 const Form = styled.form`
-    animation:slide-left 0.6s backwards;
+    // animation:slide-left 0.6s backwards;
     display:flex;
     flex-direction:column;
     width:100%;
@@ -132,7 +130,6 @@ const Contact = ()=>{
        }else if(e.target.id=="email"){
            const input = e.target.value;
            const regex = new RegExp(/\w+[@]\w+[.]\w+/)
-           console.log(input)
            if(!regex.test(input)){
             document.getElementById(e.target.id).setAttribute("is_error",true)
            }else{
@@ -161,7 +158,6 @@ const Contact = ()=>{
             body: encode({ "form-name": "contact", ...form })
           }).catch(error => console.log(error));
           if(response.ok){
-            console.log("all good.")
             setSubmitting(false);
             setSubmitted(true);
           }else{
@@ -173,7 +169,7 @@ const Contact = ()=>{
     
 
     return(
-        <Div>
+        <Div className="fade-basic">
             
             <div style={{height:"100%"}}>
 
@@ -204,8 +200,8 @@ const Contact = ()=>{
 
               
 
-                    <label htmlFor="message">Message</label>
-                    <textarea onInput={submitHandler} name="message" id="message" type="text"/>
+                    <label htmlFor="message">Message<span style={{color:"red"}}>*</span></label>
+                    <textarea required onBlur={validate} onInput={submitHandler} name="message" id="message" type="text"/>
                     {!submitting && <Button style={{margin:"auto", marginTop:"1rem"}}  type="submit">Submit</Button>}
                     {submitting && <Spinner>
                         <span><i class="fas fa-circle-notch icon"></i></span>
