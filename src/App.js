@@ -30,7 +30,6 @@ function App() {
       const Content = document.querySelector(".fade-basic");
       Content.classList.remove("fade-basic")
       Content.classList.add("next-link")
-      console.log(Content)
       
       
       setTimeout(()=>{
