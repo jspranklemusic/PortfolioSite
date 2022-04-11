@@ -216,15 +216,10 @@ footer{
 
 @media only screen and (max-width:900px){
   html{
-    font-size:95%;
-  }
-}
-
-@media only screen and (max-width:700px){
-  html{
     font-size:90%;
   }
 }
+
 
 @media only screen and (max-width:600px){
   .mobile-only-flex{
