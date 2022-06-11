@@ -155,7 +155,7 @@ const Home = props=>{
 
     const [loaded, setLoaded] = useState(false);
     const goToPage = ()=>{
-        window.location.hash="#testimonials"
+        window.location.hash="#portfolio"
     }
 
     return(
@@ -180,7 +180,7 @@ const Home = props=>{
                   I am currently employed at <a rel="noreferrer" target="_blank"  href="https://hesonline.com/">Health Enhancment Systems (HES)</a>, where I work with an amazing team to build engaging fitness challenges with Ruby on Rails, AngularJS, and other tools. I also specialize in full stack Javascript development (aka, the "MERN" stack) for most of my personal projects. I am also a father to a happy son, a husband to a beautiful wife, a classically-trained pianist, and a composer with a Bachelor of Music from the University of Missouri, Kansas City. If you're interested, you can check out my <a href="https://josiahspranklemusic.com/app/">music site</a> or my <a href="https://www.youtube.com/user/Kopaka0111/videos">YouTube</a> page. 
                   </p>
                   <br/>
-                  <Button onClick={goToPage}>What Others Say About Me</Button>
+                  <Button onClick={goToPage}>See My Portfolio</Button>
              </div>
              <div className="right">
                      <div className="image-wrapper">

@@ -4,92 +4,129 @@
         "description":"A simple, easy-to-use web application for taking notes, making study flashcards, and being productive. It features secure password storage, a smooth interface, and a user login system. Built with Vue, Sass, and Netlify serverless lambda functions. ",
         "link":"https://myflashcards.netlify.app/",
         "image":"myflashcards.png",
-        "langs":["vue","html","css","mongodb"]
+        "langs":["vue","html","css","mongodb"],
+        "tags":["productivity"]
     },
     {
         "name":"Maze Generator",
         "description":"A maze generation algorithm that utilizes the recursive backtracking method, made with Javascript. It can seed a randomly-generated maze ranging from a width of 5 to 50 cells. ",
         "link":"https://codepen.io/josiah-sprankle/full/dyvObEx",
         "image":"maze.png",
-        "langs":["javascript","html","css"]
+        "langs":["javascript","html","css"],
+        "tags":["algorithm"]
+    },
+    {
+        "name":"Batmobile Run",
+        "description":"A 2D racing game where you must dodge obstacles, shoot batarangs, and navigate the streets of Gotham. Work-in-progress.",
+        "link":"https://dainty-monstera-d4adb0.netlify.app/",
+        "image":"batmobile-run.png",
+        "langs":["javascript","html","css"],
+        "tags":["game"]
+    },
+    {
+        "name":"Draw-Mini",
+        "description":"A work-in-progress drawing app and color picker built with canvas.",
+        "link":"https://friendly-crepe-64026f.netlify.app/",
+        "image":"draw-mini.png",
+        "langs":["javascript","html","css"],
+        "tags":["productivity"]
+    },
+    {
+        "name":"COVID-19 Data Visualization Map",
+        "description":"Built with Vue. An interactive Map of COVID-19 cases in the United States from the start of the pandemic to March 2021.",
+        "link":"https://coronavirus-usa.netlify.app/",
+        "image":"covid-map.png",
+        "langs":["javascript","html","css"],
+        "tags":["data"]
     },
     {
         "name":"Sudoku Solver",
         "description":"A sudoku-solving algorithm and interactive game written in vanilla Javascript, CSS, and HTML",
         "link":"https://happy-meitner-914d9b.netlify.app/",
         "image":"sudoku.png",
-        "langs":["javascript","html","css"]
-    },
-    {
-        "name":"Word Unscrambler",
-        "description":"A word-unscrambling algorithm that uses Node.js, Cheerio, and Axios for dictionary lookup via web-scraping.",
-        "link":"https://wordunscramblerapi.josiahsprankle.repl.co/",
-        "image":"",
-        "langs":["node","javascript","html","express"]
-    },
-    {
-        "name":"Typing Speed Test",
-        "description":"A typing test that checks your accuracy, speed, and returns an adjusted WPM score. Made with React.",
-        "link":"https://wpm-speed-test.netlify.app/",
-        "image":"typetest.png",
-        "langs":["react","css","html"]
-    },
-    {
-        "name":"My Job Search",
-        "description":"A class-based web-scraping tool that searches Indeed, FlexJobs, and SimplyHired for job postings. Made with Cheerio, Node.js, Express, and React.",
-        "link":"https://jobsearchwebscraper.josiahsprankle.repl.co/",
-        "image":"jobsearch.png",
-        "langs":["react","node,","css","html"]
-    },
-    {
-        "name":"Social Media Website",
-        "description":"A MEVN Stack social media application, featuring custom image uploads, user authentication, logins, and password encryption. Additional features are the ability to like and comment on posts, create a custom user profile, request friends, and have real-time chat. ",
-        "link":"https://zipp.josiahsprankle.repl.co/",
-        "image":"zipp.png",
-        "langs":["node","express","mongodb","vue","html","css"]
-    },
-    {
-        "name":"2-Player Chess",
-        "description":"A real-time, 2-player chess application with game clock, move notation, custom room codes, and a working implementation of the rules.",
-        "link":"https://2playerchess.josiahsprankle.repl.co/",
-        "image":"chess-pic.png",
-        "langs":["javascript","html","css","bootstrap","node","express"]
-    },
-    {
-        "name":"Exalted Christian Band",
-        "description":"This website is a band portfolio page for a band in Roanoke, VA. This project features a custom contact form, menu layout, and image grid. It was built with React and deployed with Netlify.",
-        "link":"https://exaltedband.netlify.app/",
-        "image":"exalted-band.png",
-        "langs":["react","html","css"]
-    },
-    {
-        "name":"Vinyl Records Store",
-        "description":"An e-commerce application built with Vue, Express, Node.js, and MongoDB. This website uses the PayPal API. Upon payment completion, the purchaser receives an email with their itemized total and order number with a custom designed email template in Nodemailer. ",
-        "link":"https://jamessadlertestserver.josiahsprankle.repl.co/",
-        "image":"vinyl-records-store.png",
-        "langs":["mongodb","vue","express","html","css","node"]
+        "langs":["javascript","html","css"],
+        "tags":["algorithm","game"]
     },
     {
         "name":"Road Whiz",
         "description":"How good are your driving skills? Can you reach the objective without crashing into trees, potholes, or other cars? Built with pure CSS and Javascript using the ES6 modular import system.",
         "link":"https://road-whiz.netlify.app/",
         "image":"roadwhiz.png",
-        "langs":["javascript","css","html"]
+        "langs":["javascript","css","html"],
+        "tags":["game"]
     },
-    
+    {
+        "name":"Word Unscrambler",
+        "description":"A word-unscrambling algorithm that uses Node.js, Cheerio, and Axios for dictionary lookup via web-scraping.",
+        "link":"https://wordunscramblerapi.josiahsprankle.repl.co/",
+        "image":"",
+        "langs":["node","javascript","html","express"],
+        "tags":["algorithm","backend"]
+    },
+    {   
+        "name":"Computle",
+        "description":"A computer-themed word-guessing game inspired by Wordle. Made with Vanilla JS.",
+        "link":"https://computle.josiahsprankle.repl.co/",
+        "image":"computle.png",
+        "langs":["node","javascript","html","express"],
+        "tags":["game"]
+    },
+
+    {
+        "name":"Typing Speed Test",
+        "description":"A typing test that checks your accuracy, speed, and returns an adjusted WPM score. Made with React.",
+        "link":"https://wpm-speed-test.netlify.app/",
+        "image":"typetest.png",
+        "langs":["react","css","html"],
+        "tags":["productivity"]
+    },
+    {
+        "name":"My Job Search",
+        "description":"A class-based web-scraping tool that searches Indeed, FlexJobs, and SimplyHired for job postings. Made with Cheerio, Node.js, Express, and React.",
+        "link":"https://jobsearchwebscraper.josiahsprankle.repl.co/",
+        "image":"jobsearch.png",
+        "langs":["react","node,","css","html"],
+        "tags":["full-stack"]
+    },
+    {
+        "name":"2-Player Chess",
+        "description":"A real-time, 2-player chess application with game clock, move notation, custom room codes, and a working implementation of the rules.",
+        "link":"https://2playerchess.josiahsprankle.repl.co/",
+        "image":"chess-pic.png",
+        "langs":["javascript","html","css","bootstrap","node","express"],
+        "tags":["full-stack","game"]
+    },
+    {
+        "name":"Exalted Christian Band",
+        "description":"This website is a band portfolio page for a band in Roanoke, VA. This project features a custom contact form, menu layout, and image grid. It was built with React and deployed with Netlify.",
+        "link":"https://exaltedband.netlify.app/",
+        "image":"exalted-band.png",
+        "langs":["react","html","css"],
+        "tags":["static"]
+    },
+    {
+        "name":"Vinyl Records Store",
+        "description":"An e-commerce application built with Vue, Express, Node.js, and MongoDB. This website uses the PayPal API. Upon payment completion, the purchaser receives an email with their itemized total and order number with a custom designed email template in Nodemailer. ",
+        "link":"https://jamessadlertestserver.josiahsprankle.repl.co/",
+        "image":"vinyl-records-store.png",
+        "langs":["mongodb","vue","express","html","css","node"],
+        "tags":["full-stack","commerce"]
+    },
     {
         "name":"Music Portfolio Store",
         "description":"A music portfolio SPA website with e-commerce, a shopping cart, media playback, a custom PDF viewer, custom email templating, and encrypted downloads. I built this website with the MEVN stack top-to-bottom, utilizing the PayPal API for secure payments. ",
         "link":"http://www.josiahspranklemusic.com/",
         "image":"jds-music-pic.png",
-        "langs":["vue","mongodb","express","node","html","css"]
+        "langs":["vue","mongodb","express","node","html","css"],
+        "tags":["full-stack","commerce"]
     },
     {
         "name":"Trackful",
         "description":"A full-stack time tracker application with React, Framer-Motion, and an original JSON database. Each user's time is saved to a database, where the user can create an account, add time, and even change their preferred color scheme with a Redux-manged color selection tool. ",
         "link":"https://trackful.netlify.app/",
         "image":"trackful.png",
-        "langs":["react","node","html","css","mongodb"]
+        "langs":["react","node","html","css","mongodb"],
+        "tags":["full-stack","productivity"]
     },
  
     {
@@ -97,26 +134,38 @@
         "description":"A tic-tac-toe program with, made in vanilla JS. It features an optional computer opponent, with a simple minimax AI.",
         "link":"https://tictactoe-jds.netlify.app/",
         "image":"tictactoe.png",
-        "langs":["css","javascript","html"]
+        "langs":["css","javascript","html"],
+        "tags":["game"]
+    },
+    {
+        "name":"Social Media Website",
+        "description":"A MEVN Stack social media application, featuring custom image uploads, user authentication, logins, and password encryption. Additional features are the ability to like and comment on posts, create a custom user profile, request friends, and have real-time chat. ",
+        "link":"https://zipp.josiahsprankle.repl.co/",
+        "image":"zipp.png",
+        "langs":["node","express","mongodb","vue","html","css"],
+        "tags":["full-stack"]
     },
     {
         "name":"Time Tracker",
         "description":"A precursor to Trackful - a time-tracking application made with Vue. Note: the tracker will not run on the background in mobile browsers.",
         "link":"https://time-tracker.josiahsprankle.repl.co/",
         "image":"timetracker.png",
-        "langs":["vue","html","css"]
+        "langs":["vue","html","css"],
+        "tags":["productivity"]
     },
     {
         "name":"PyBlog",
         "description":"A simple CRUD app built with Python and the Flask micro-framework. This simple web application features user authentication, session ID's, and database CRUD operations with the sqlite3 database. After creating an account, you can create, edit, and delete your posts. Code is available on Github. ",
         "link":"https://josiahsprankle.pythonanywhere.com/",
         "image":"PyBlog.png",
-        "langs":["python","mysql","html","css"]
+        "langs":["python","mysql","html","css"],
+        "tags":["backend"]
     },
     {
         "name":"MySQL Products API",
         "description":"A MySQL query API with limiting, sorting, pagination, and sorting. All of the data was generated using the faker module, and API includes 100 unique products, each with a unique ID. ",
         "link":"https://github.com/jspranklemusic/Products-API",
-        "langs":["mysql","node","express"]
+        "langs":["mysql","node","express"],
+        "tags":["backend"]
     }
 ]

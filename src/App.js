@@ -94,7 +94,7 @@ function App() {
       <main id="content">
         { hash === "#home" && <Home></Home>}
         { hash === "#portfolio" && <PortfolioBar></PortfolioBar>}
-        { hash === "#testimonials" && <Testimonials></Testimonials>}
+        {/* { hash === "#testimonials" && <Testimonials></Testimonials>} */}
         { hash === "#contact" && <Contact></Contact>}
       <div style={{height:"1rem"}}></div>
         

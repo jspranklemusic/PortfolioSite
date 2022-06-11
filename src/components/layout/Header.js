@@ -71,7 +71,7 @@ useEffect(() => {
     return(
         <HeaderContainer>
             <a style={hash == "#home" ? activeStyle : inactiveStyle} href="#home">Home</a>
-            <a style={hash == "#testimonials" ? activeStyle : inactiveStyle} href="#testimonials">Testimonials</a>
+            {/* <a style={hash == "#testimonials" ? activeStyle : inactiveStyle} href="#testimonials">Testimonials</a> */}
             <a style={hash == "#portfolio" ? activeStyle : inactiveStyle} href="#portfolio">Portfolio</a>
             <a style={hash == "#contact" ? activeStyle : inactiveStyle} href="#contact">Contact</a>
         </HeaderContainer>
