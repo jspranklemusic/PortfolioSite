@@ -5,7 +5,6 @@ import React, {useState, useEffect} from 'react'
 //views
 import PortfolioBar from "./components/jsx/PortfolioBar"
 import Home from './components/views/Home'
-import Testimonials from './components/views/Testimonials'
 import Contact from './components/views/Contact'
 import projects from '../src/data/projects.json'
 import stories from '../src/data/stories.json'

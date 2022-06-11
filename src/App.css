@@ -221,7 +221,7 @@ footer{
 }
 
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:800px){
   .mobile-only-flex{
     display:flex !important;
   }

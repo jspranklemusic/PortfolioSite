@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import IconSelector from '../custom/IconSelector'
 import projectsList from '../../data/projects.json'
-import Button from '../jsx/Button'
 
 const default_png = "defaultcode.png"
 const Tag = styled.button`
@@ -122,6 +120,10 @@ const PortfolioBar = styled.div`
             padding: 0;
             margin: 0;
             border-right: 3px solid rgb(220,220,220);
+            @media only screen and (max-width: 800px){
+                display: none;
+
+            }
             .project-image{
                 width: 8rem;
                 height: 100%;
@@ -139,15 +141,23 @@ const PortfolioBar = styled.div`
             padding: 0.5rem;
             h3{
                 margin-bottom: 0.5rem;
+                width: max-content;
+            }
+            .project-image-mobile{
+                display: none;
+                @media only screen and (max-width: 800px){
+                    display: block;
+                    width: 5rem;
+                    height: 5rem;
+                    object-fit: cover;
+                    margin: 0.5rem auto;
+                    border-radius: 5px;
+                    border: 3px solid rgb(220,220,220);
+                }
             }
         }
     }
-
-
-
-
 `
-
 
 const Bar = props=>{
     const [projects, setProjects] = useState([]);
@@ -167,7 +177,7 @@ const Bar = props=>{
                 projectTags[projectTag] = true;
             })
         })
-        setTags(Object.keys(projectTags));
+        setTags(Object.keys(projectTags).sort((a,b)=>b > a));
         console.log(Object.keys(projectTags))
     },[]);
 
@@ -192,25 +202,10 @@ const Bar = props=>{
         }
         
         setProjects(filteredProjects);
-    },[tagFilters,searchText]);
-
-
-    function filterProjects(filters){
-        let filteredProjects = projectsList;
-        if(filters.tags){
-            filteredProjects = filteredProjects.filter(item=>{
-                let containsTags = false;
-                filters.tags.forEach(tag=>{
-                    if(item.tags.includes(tag)){
-                        containsTags = true;
-                    }
-                })
-                return containsTags
-            })
-        }
-        setProjects(filteredProjects);
-    }
-
+    },[tagFilters,searchText,
+    tagCount
+    // comment out later
+    ]);
 
     function resetTags(){
         setTagFilters([]);
@@ -245,7 +240,7 @@ const Bar = props=>{
             <h1>My Portfolio</h1>
             <div className='input-container'>
                 <input ref={inputRef} onChange={inputHandler}/>
-               {searchText && <CancelInput onClick={cancelInput}>x</CancelInput>}
+                {searchText && <CancelInput onClick={cancelInput}>x</CancelInput>}
             </div>
             <div className='tags-container'>
             <Tag onClick={resetTags} selected={tagCount === 0}>all</Tag>
@@ -255,10 +250,11 @@ const Bar = props=>{
             <PortfolioBar>
             {projects.map(project=>(<a rel="noreferrer" target="_blank" href={project.link} key={project.name}>
                 <div className='project-left'>
-                    <img className='project-image' src={project.image ? "/assets/images/" + project.image :  "/assets/images/" + default_png}/>
+                    <img  alt={project.name + " image"} className='project-image' src={project.image ? "/assets/images/" + project.image :  "/assets/images/" + default_png}/>
                 </div>
                 <div className='project-right'>
                     <h3>{project.name}</h3>
+                    <img className="project-image-mobile" src={project.image ? "/assets/images/" + project.image :  "/assets/images/" + default_png}/>
                     <p>{project.description}</p>
                     <div>
                         {project.tags.map(tag => (<Tag className='mini'>{tag}</Tag>))}

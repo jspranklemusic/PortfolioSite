@@ -36,7 +36,7 @@ const Div = styled.div`
             
         }
 
-    @media only screen and (max-width:600px){
+    @media only screen and (max-width:800px){
         grid-template-columns:100%;
     }
 
@@ -98,7 +98,7 @@ const Div = styled.div`
         justify-content:center;
         // animation:slide-right 0.6s backwards;
         // animation-delay:0.25s;
-            @media only screen and (max-width:600px){
+            @media only screen and (max-width:800px){
             display:none;
         }
 
@@ -177,7 +177,7 @@ const Home = props=>{
                   My name is Josiah, and I am a full stack web developer with a passion for bringing new projects to life! I enjoy coding because it combines creativity and problem-solving. I have completed a diverse set of websites &amp; projects, ranging from small portfolio pages and band/musician websites to fully-fledged full stack applications with authentication, emailing, and real-time chat.
                   </p>
                   <p>
-                  I am currently employed at <a rel="noreferrer" target="_blank"  href="https://hesonline.com/">Health Enhancment Systems (HES)</a>, where I work with an amazing team to build engaging fitness challenges with Ruby on Rails, AngularJS, and other tools. I also specialize in full stack Javascript development (aka, the "MERN" stack) for most of my personal projects. I am also a father to a happy son, a husband to a beautiful wife, a classically-trained pianist, and a composer with a Bachelor of Music from the University of Missouri, Kansas City. If you're interested, you can check out my <a href="https://josiahspranklemusic.com/app/">music site</a> or my <a href="https://www.youtube.com/user/Kopaka0111/videos">YouTube</a> page. 
+                  I currently employed at <a rel="noreferrer" target="_blank"  href="https://hesonline.com/">Health Enhancment Systems (HES)</a>, where I have worked since 2021. I work with an amazing team to build engaging fitness challenges with Ruby on Rails, AngularJS, and other tools. I also specialize in full stack Javascript development (aka, the "MERN" stack) for most of my personal projects. I am also a father to a happy son, a husband to a beautiful wife, a classically-trained pianist, and a film composer. If you're interested, you can check out my <a href="https://josiahspranklemusic.com/app/">music site</a> or my <a href="https://www.youtube.com/user/Kopaka0111/videos">YouTube</a> page. 
                   </p>
                   <br/>
                   <Button onClick={goToPage}>See My Portfolio</Button>

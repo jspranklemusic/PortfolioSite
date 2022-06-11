@@ -26,7 +26,6 @@ const Form = styled.form`
     display:flex;
     flex-direction:column;
     width:100%;
-    
     max-width:600px;
     margin:1rem auto;
     background:white;
@@ -34,14 +33,16 @@ const Form = styled.form`
     height:95%;
     min-height:500px;
     align-items:center;
-    padding:1rem;
+    padding:1.25rem;
     border-radius:10px;
+
+
 
 
     .form-control{
         width:100%;
         display:grid;
-        margin:1rem 0;
+        margin:0.75rem 0;
         align-items:center;
         justify-content:space-between;
         grid-template-columns:24% 76%;
@@ -53,7 +54,12 @@ const Form = styled.form`
             font-weight:bold;
             padding:0rem 0.5rem;
             text-align:left;
-           
+
+            
+        }
+
+        [for="message"]{
+            margin-bottom: 0.75rem;
         }
 
         textarea{
@@ -127,9 +133,9 @@ const Contact = ()=>{
     function validate(e){
        if(!e.target.value){
            document.getElementById(e.target.id).setAttribute("is_error",true)
-       }else if(e.target.id=="email"){
+       }else if(e.target.id === "email"){
            const input = e.target.value;
-           const regex = new RegExp(/\w+[@]\w+[.]\w+/)
+           const regex = new RegExp(/\w+[@]\w+[.]\w+/);
            if(!regex.test(input)){
             document.getElementById(e.target.id).setAttribute("is_error",true)
            }else{
@@ -202,7 +208,7 @@ const Contact = ()=>{
 
                     <label htmlFor="message">Message<span style={{color:"red"}}>*</span></label>
                     <textarea required onBlur={validate} onInput={submitHandler} name="message" id="message" type="text"/>
-                    {!submitting && <Button style={{margin:"auto", marginTop:"1rem"}}  type="submit">Submit</Button>}
+                    {!submitting && <Button style={{margin:"auto", marginTop:"1.25rem"}}  type="submit">Submit</Button>}
                     {submitting && <Spinner>
                         <span><i class="fas fa-circle-notch icon"></i></span>
                         &nbsp;

@@ -1,4 +1,12 @@
 [
+    {   
+        "name":"Computle",
+        "description":"A computer-themed word-guessing game inspired by Wordle. Made with Vanilla JS.",
+        "link":"https://computle.josiahsprankle.repl.co/",
+        "image":"computle.png",
+        "langs":["node","javascript","html","express"],
+        "tags":["game"]
+    },
     {
         "name":"My Flashcards",
         "description":"A simple, easy-to-use web application for taking notes, making study flashcards, and being productive. It features secure password storage, a smooth interface, and a user login system. Built with Vue, Sass, and Netlify serverless lambda functions. ",
@@ -9,7 +17,7 @@
     },
     {
         "name":"Batmobile Run",
-        "description":"A 2D racing game where you must dodge obstacles, shoot batarangs, and navigate the streets of Gotham. Work-in-progress.",
+        "description":"A work-in-progress 2D racing game where you must dodge obstacles, shoot batarangs, and navigate the streets of Gotham. Work-in-progress.",
         "link":"https://dainty-monstera-d4adb0.netlify.app/",
         "image":"batmobile-run.png",
         "langs":["javascript","html","css"],
@@ -63,15 +71,6 @@
         "langs":["node","javascript","html","express"],
         "tags":["algorithm","backend"]
     },
-    {   
-        "name":"Computle",
-        "description":"A computer-themed word-guessing game inspired by Wordle. Made with Vanilla JS.",
-        "link":"https://computle.josiahsprankle.repl.co/",
-        "image":"computle.png",
-        "langs":["node","javascript","html","express"],
-        "tags":["game"]
-    },
-
     {
         "name":"Typing Speed Test",
         "description":"A typing test that checks your accuracy, speed, and returns an adjusted WPM score. Made with React.",
@@ -128,15 +127,6 @@
         "langs":["react","node","html","css","mongodb"],
         "tags":["full-stack","productivity"]
     },
- 
-    {
-        "name":"Tic-Tac-Toe",
-        "description":"A tic-tac-toe program with, made in vanilla JS. It features an optional computer opponent, with a simple minimax AI.",
-        "link":"https://tictactoe-jds.netlify.app/",
-        "image":"tictactoe.png",
-        "langs":["css","javascript","html"],
-        "tags":["game"]
-    },
     {
         "name":"Social Media Website",
         "description":"A MEVN Stack social media application, featuring custom image uploads, user authentication, logins, and password encryption. Additional features are the ability to like and comment on posts, create a custom user profile, request friends, and have real-time chat. ",
@@ -146,20 +136,20 @@
         "tags":["full-stack"]
     },
     {
+        "name":"Tic-Tac-Toe",
+        "description":"A tic-tac-toe program with, made in vanilla JS. It features an optional computer opponent, with a simple minimax AI.",
+        "link":"https://tictactoe-jds.netlify.app/",
+        "image":"tictactoe.png",
+        "langs":["css","javascript","html"],
+        "tags":["game"]
+    },
+    {
         "name":"Time Tracker",
         "description":"A precursor to Trackful - a time-tracking application made with Vue. Note: the tracker will not run on the background in mobile browsers.",
         "link":"https://time-tracker.josiahsprankle.repl.co/",
         "image":"timetracker.png",
         "langs":["vue","html","css"],
         "tags":["productivity"]
-    },
-    {
-        "name":"PyBlog",
-        "description":"A simple CRUD app built with Python and the Flask micro-framework. This simple web application features user authentication, session ID's, and database CRUD operations with the sqlite3 database. After creating an account, you can create, edit, and delete your posts. Code is available on Github. ",
-        "link":"https://josiahsprankle.pythonanywhere.com/",
-        "image":"PyBlog.png",
-        "langs":["python","mysql","html","css"],
-        "tags":["backend"]
     },
     {
         "name":"MySQL Products API",
