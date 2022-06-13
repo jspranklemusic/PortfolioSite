@@ -103,6 +103,14 @@
         "langs":["react","html","css"],
         "tags":["static"]
     },
+        {
+        "name":"Birthday RSVP Website",
+        "description":"This website is a an RSVP website for a birthday party, featuring a small backend built on Netlify serverless functions and a vanilla JS frontend.",
+        "link":"https://hudsonbirthday.netlify.app/",
+        "image":"hudsonbirthday.png",
+        "langs":["javascript","html","css"],
+        "tags":["static"]
+    },
     {
         "name":"Vinyl Records Store",
         "description":"An e-commerce application built with Vue, Express, Node.js, and MongoDB. This website uses the PayPal API. Upon payment completion, the purchaser receives an email with their itemized total and order number with a custom designed email template in Nodemailer. ",

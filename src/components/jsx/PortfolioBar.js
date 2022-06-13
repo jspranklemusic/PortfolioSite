@@ -171,6 +171,7 @@ const Bar = props=>{
     useEffect(()=>{
         setProjects(projectsList);
         const projectTags = {}
+        console.log(projectsList.length)
         projectsList.forEach(project=>{
             console.log(project.tags)
             project.tags.forEach(projectTag=>{
