@@ -40,28 +40,20 @@
         "tags":["data"]
     },
     {
-        "name":"Maze Generator",
-        "description":"A maze generation algorithm that utilizes the recursive backtracking method, made with Javascript. It can seed a randomly-generated maze ranging from a width of 5 to 50 cells. ",
-        "link":"https://codepen.io/josiah-sprankle/full/dyvObEx",
-        "image":"maze.png",
-        "langs":["javascript","html","css"],
-        "tags":["algorithm"]
-    },
-    {
-        "name":"Sudoku Solver",
-        "description":"A sudoku-solving algorithm and interactive game written in vanilla Javascript, CSS, and HTML",
-        "link":"https://happy-meitner-914d9b.netlify.app/",
-        "image":"sudoku.png",
-        "langs":["javascript","html","css"],
-        "tags":["algorithm","game"]
-    },
-    {
         "name":"Road Whiz",
         "description":"How good are your driving skills? Can you reach the objective without crashing into trees, potholes, or other cars? Built with pure CSS and Javascript using the ES6 modular import system.",
         "link":"https://road-whiz.netlify.app/",
         "image":"roadwhiz.png",
         "langs":["javascript","css","html"],
         "tags":["game"]
+    },
+    {
+        "name":"Maze Generator",
+        "description":"A maze generation algorithm that utilizes the recursive backtracking method, made with Javascript. It can seed a randomly-generated maze ranging from a width of 5 to 50 cells. ",
+        "link":"https://codepen.io/josiah-sprankle/full/dyvObEx",
+        "image":"maze.png",
+        "langs":["javascript","html","css"],
+        "tags":["algorithm"]
     },
     {
         "name":"Word Unscrambler",
@@ -72,12 +64,28 @@
         "tags":["algorithm","backend"]
     },
     {
+        "name":"Sudoku Solver",
+        "description":"A sudoku-solving algorithm and interactive game written in vanilla Javascript, CSS, and HTML",
+        "link":"https://happy-meitner-914d9b.netlify.app/",
+        "image":"sudoku.png",
+        "langs":["javascript","html","css"],
+        "tags":["algorithm","game"]
+    },
+    {
         "name":"Typing Speed Test",
         "description":"A typing test that checks your accuracy, speed, and returns an adjusted WPM score. Made with React.",
         "link":"https://wpm-speed-test.netlify.app/",
         "image":"typetest.png",
         "langs":["react","css","html"],
         "tags":["productivity"]
+    },
+    {
+        "name":"BPM Tools",
+        "description":"A metronome and BPM tapper, built using the Web Audio API and vanilla Javascript.",
+        "link":"https://metronome-bpm-tapper.netlify.app/",
+        "image":"metronome.png",
+        "langs":["javascript","css","html"],
+        "tags":["productivity","static"]
     },
     {
         "name":"My Job Search",
